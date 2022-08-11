@@ -1,0 +1,21 @@
+.FamilyMembers .close-btn{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 20px;
+    border-color: var(--danger-color);
+}
+.FamilyMembers .add-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.FamilyMembers .add-btn ion-icon{
+    font-size: 18px
+}
