@@ -19,3 +19,18 @@
 .FamilyMembers .add-btn ion-icon{
     font-size: 18px
 }
+
+.FamilyMembers table{
+    border-radius: 0 !important;
+}
+
+.FamilyMembers table th{
+    font-weight: bold;
+}
+
+.FamilyMembers table th,
+.FamilyMembers table td{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}

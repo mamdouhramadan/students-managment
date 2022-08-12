@@ -24,6 +24,7 @@ const InputField = ({ readOnly, type, label, options, icon, onChange, value, nam
                             type={type || 'text'}
                             placeholder={label}
                             value={value || ''}
+
                         />
                     </MDBInputGroup>
                 </div>
@@ -47,7 +48,7 @@ const InputField = ({ readOnly, type, label, options, icon, onChange, value, nam
                                 <option value={0} disabled >{`Select ${label}`}</option>
                                 {
                                     options?.map(((item, index) => {
-                                        return <option key={index} value={item.ID}>{item.Title}</option>
+                                        return <option key={index} value={item.ID|| item}>{item.Title || item}</option>
                                     }))
                                 }
                             </select>
@@ -69,9 +70,11 @@ const InputField = ({ readOnly, type, label, options, icon, onChange, value, nam
                                 format="dd/MM/yyyy"
                                 //label="Date of birth"
                                 views={["year", "month", "date"]}
-                                value={moment(selectedDate ? selectedDate : new Date()).format('L')}
+                                value={selectedDate ? moment(selectedDate ).format('L') : null}
                                 readOnly={readOnly}
                                 onChange={date => handleDateChange(date)}
+                                emptyLabel={label} //<--- custom placeholder when date is null
+
                             />
                         </MDBInputGroup>
                     </div>

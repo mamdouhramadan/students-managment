@@ -1,90 +1,118 @@
-import { MDBBtn } from 'mdb-react-ui-kit'
+import { MDBBtn, MDBCol, MDBRow } from 'mdb-react-ui-kit'
 import moment from 'moment'
 import React, { useState } from 'react'
+import { deleteFamilyMember } from '../../API'
 import { FamilyForm } from '../../Constants'
 import InputField from '../InputField'
 import './FamilyMembers.css'
 
-const FamilyMembers = ({ type, title, members, handleDateChange, onChange }) => {
-    const [showMemberForm, setshowMemberForm] = useState(false)
-    const handleToggle = () => {
-        setshowMemberForm(!showMemberForm)
-    }
+const FamilyMembers = ({ type, title, familyMembers, newMember, handleDateChange, onChange, options, addNewFamilyMember, showMemberForm, toggleMemberForm, deleteMember,updateNationality }) => {
+
 
     return (
         <div className="FamilyMembers">
-            <div className='d-flex justify-content-between align-items-center'>
+            <div className='d-flex justify-content-between align-items-center mb-4'>
                 <h5> {title}</h5>
                 {
-                    !showMemberForm ?
-                        <MDBBtn onClick={handleToggle} className="add-btn">
-                            <ion-icon name="add-outline" className="text-white"></ion-icon>
-                            <span className='mx-2'>Add New</span>
-                        </MDBBtn>
-                        :
-                        <MDBBtn className='close-btn btn-light text-danger' color='secondary' onClick={handleToggle}>
-                            <ion-icon name="close-outline"></ion-icon>
-                        </MDBBtn>
+                    type !== 'view' &&
+                    (
+                        !showMemberForm ?
+                            <MDBBtn onClick={toggleMemberForm} className="add-btn">
+                                <ion-icon name="add-outline" className="text-white"></ion-icon>
+                                <span className='mx-2'>Add New</span>
+                            </MDBBtn>
+                            :
+                            <MDBBtn className='close-btn btn-light text-danger' color='secondary' onClick={toggleMemberForm}>
+                                <ion-icon name="close-outline"></ion-icon>
+                            </MDBBtn>
+                    )
                 }
 
             </div>
-
             {
-                type !== 'view' &&
-                <div className='form-group'>
-                    {/* <InputField label={"first Name"} type={'text'} icon={"person"} value={''} /> */}
-                </div>
-            }
+                showMemberForm && type !== 'view' &&
+                <MDBRow end className='mb-4'>
 
-            {
-                showMemberForm &&
-                <div className='form-group'>
+                    {/* <input value={newMember÷÷.firstName || ''} name={'firstName'} /> */}
                     {
                         FamilyForm.map((item, index) =>
-                            <InputField
-                                key={index}
-                                label={item?.label}
-                                type={item?.type}
-                                icon={item?.icon}
-                                name={item?.name}
-                                onChange={onchange}
-                                value={members?.FamilyMembers[item.name] || null}
-                                readOnly={members?.type === 'view' || item.readOnly}
-                                options={item?.options}
-                                handleDateChange={handleDateChange}
-                            // selectedDate={members['dateOfBirth'] || null}
-                            />
+                            <MDBCol size='12' sm='6' key={index}>
+                                <InputField
+                                    key={index}
+                                    label={item?.label}
+                                    type={item?.type}
+                                    icon={item?.icon}
+                                    name={item?.name}
+                                    onChange={(e) => onChange(e)}
+                                    value={newMember[item.name] || null}
+                                    options={item.options || options}
+                                    handleDateChange={handleDateChange}
+                                    selectedDate={newMember['dateOfBirth'] || null}
+                                />
+                            </MDBCol>
                         )
+
                     }
-                </div>
+
+
+                    <MDBCol size={6} className={"mt-4"}>
+                        <MDBBtn color='secondary' className='btn-block' onClick={addNewFamilyMember}>Add New Member</MDBBtn>
+                    </MDBCol>
+                </MDBRow>
             }
 
-            {
-                members ?
-                    <table className='table'>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Nationality</th>
-                                <th>Date Of Birth</th>
-                                <th>Relationship</th>
-                                <th> Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {members.map((item, index) => {
-                                return (
-                                    <tr key={index}>
-                                        <td>{`${item.firstName} ${item.lastName}`}</td>
-                                        <td>{`${item.nationality.Title}`}</td>
-                                        <td>{`${moment(item.dateOfBirth).format('L')}`}</td>
-                                        <td>{`${item.relationship}`}</td>
-                                    </tr>
-                                )
-                            })}
-                        </tbody>
 
-                    </table>
+
+            {
+                familyMembers.length > 0 ?
+                    <div className='table-responsive'>
+                        <table className='table table-bordered table-sm text-center'>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Nationality</th>
+                                    <th>Date Of Birth</th>
+                                    <th>Relationship</th>
+                                    <th> Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {familyMembers?.map((item, index) => {
+                                    
+                                    return (
+                                        <tr key={index}>
+                                            <td>{index + 1}</td>
+                                            <td>{`${item?.firstName} ${item?.lastName}`}</td>
+                                            {
+                                                type === 'view' ?
+                                                    <td>{`${item?.nationality?.Title || '-'}`}</td>
+                                                    :
+                                                    <td>
+                                                        <select onChange={(e)=>updateNationality(e,item.ID)} value={item.nationality.ID}>
+                                                            <option value={0} disabled>Choose Nationality</option>
+                                                            {
+                                                                options.map((option, index) => {
+                                                                    return (
+                                                                        <option key={index} value={option.ID}>{option.Title}</option>
+                                                                    )
+                                                                })
+                                                            }
+                                                        </select>
+
+
+                                                    </td>
+                                            }
+                                            <td>{`${moment(item.dateOfBirth).format('L')}`}</td>
+                                            <td>{`${item.relationship}`}</td>
+                                            <td><ion-icon onClick={() => deleteMember(item.ID)} name="close" style={{ color: '#c0392b', fontSize: 18 }} /></td>
+                                        </tr>
+                                    )
+                                })}
+                            </tbody>
+
+                        </table>
+                    </div>
                     :
                     <div className='p-3 text-center bg-light'>
                         <h6> No Members Found </h6>

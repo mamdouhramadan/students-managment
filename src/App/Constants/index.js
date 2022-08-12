@@ -81,12 +81,11 @@ export const FamilyForm = [
 
     },
     {
-        label: 'Nationality',
+        label: 'Relation',
         type: 'select',
-        name: 'nationality',
-        icon: 'globe',
+        name: 'relationship',
+        icon: 'star',
         required: true,
-        // value: values?.nationality || '',
         options: relationships
     },
     {

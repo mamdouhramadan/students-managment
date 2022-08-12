@@ -33,6 +33,9 @@ button.btn-primary {
   background: var(--main-color);
   border-radius: var(--border-radius);
 }
+.MuiButtonBase-root{
+  box-shadow: none !important;
+}
 
 table {
   background-color: var(--white-color);
