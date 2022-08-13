@@ -3,7 +3,7 @@ import React from 'react'
 import './header.css'
 import logo from './../../Assets/images/logo.png';
 import DropdownMenu from '../DropdownMenu';
-import { roles } from '../../Constants';
+import { roles } from '../../constants';
 
 const Header = () => {
     return (

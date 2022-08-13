@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react'
-import Table from '../../Components/Table';
+import Table from '../../components/Table';
 import PageContainer from '../../Containers/PageContainer';
 import { MDBBtn, MDBCol, MDBRow } from 'mdb-react-ui-kit';
-import AppModal from '../../Components/Modal';
-import InputField from '../../Components/InputField';
-import { ActionButton } from '../../Components/ActionButton';
+import AppModal from '../../components/Modal';
+import InputField from '../../components/InputField';
+import { ActionButton } from '../../components/ActionButton';
 import { studentForm } from '../../Constants';
 import moment from 'moment';
 import PageLogic from './page.logic';
-import Breadcrumbs from '../../Components/Breadcrumbs';
-import FamilyMembers from '../../Components/FamilyMembers';
-import LoadingSpinner from '../../Components/Loading';
+import Breadcrumbs from '../../components/Breadcrumbs';
+import FamilyMembers from '../../components/FamilyMembers';
+import LoadingSpinner from '../../components/Loading';
 
 const LandingPage = () => {
     const { loading, showModel, studentsList, student, nationalities, header, newFamilyMember, handleAddFamilyMember, handleFamilyDateOfBirthChange, GetStudentsListAndNationalities, handleAddStudentBtn, handleEditStudentBtn, viewStudentsDetailes, handleOnChangeStudent, handleOnChangeFamily, handleDateOfBirthChange, handleOnSubmitStudent, setShowModel, toggleModal, modalTitle, showMemberForm, toggleMemberForm,deletFamilyMemberByID,updateMemberNationality } = PageLogic();

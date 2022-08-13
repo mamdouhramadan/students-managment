@@ -1,4 +1,4 @@
-import LandingPage from "./Pages/LandingPage";
+import LandingPage from "./pages/LandingPage";
 import { ToastContainer } from 'react-toastify';
 
 const App = () => {

@@ -2,7 +2,7 @@ import { type } from '@testing-library/user-event/dist/type';
 import axios from 'axios';
 import { useState } from 'react'
 import { addFamilyMember, addStudent, deleteFamilyMember, editStudent, getFamilyMembers, getNationalities, getSingleStudent, getStudents, updateNationality } from '../../API';
-import ShowToast from '../../Components/ShowToast';
+import ShowToast from '../../components/ShowToast';
 
 const PageLogic = () => {
     const initialData = {

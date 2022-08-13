@@ -1,7 +1,7 @@
 import { MDBContainer } from 'mdb-react-ui-kit'
 import React from 'react'
-import Footer from '../Components/Footer'
-import Header from '../Components/Header'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 const PageContainer = ({ children }) => {
     return (
