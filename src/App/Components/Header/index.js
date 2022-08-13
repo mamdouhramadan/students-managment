@@ -1,9 +1,8 @@
-import { MDBContainer, MDBDropdown, MDBDropdownItem, MDBDropdownLink, MDBDropdownMenu, MDBDropdownToggle } from 'mdb-react-ui-kit';
+import { MDBContainer } from 'mdb-react-ui-kit';
 import React from 'react'
 import './header.css'
-import logo from './../../Assets/images/logo.png';
-import DropdownMenu from '../DropdownMenu';
-import { roles } from '../../constants';
+import logo from './../../assets/images/logo.png';
+import UserRoleDropdown from '../UserRoleDropdown';
 
 const Header = () => {
     return (
@@ -24,7 +23,7 @@ const Header = () => {
                         <div className="user-detailes">
                             <h6 className='username'>Mamdoug Ramadan</h6>
                             <div className='select-dropdown select-role'>
-                                <DropdownMenu roles={roles} />
+                                <UserRoleDropdown />
                             </div>
                         </div>
                     </div>

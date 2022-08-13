@@ -1,8 +1,8 @@
 import { MDBBtn, MDBCol, MDBRow } from 'mdb-react-ui-kit'
 import moment from 'moment'
 import React, { useState } from 'react'
-import { deleteFamilyMember } from '../../API'
-import { FamilyForm } from '../../Constants'
+import { deleteFamilyMember } from '../../api'
+import { FamilyForm } from '../../constants'
 import InputField from '../InputField'
 import './FamilyMembers.css'
 

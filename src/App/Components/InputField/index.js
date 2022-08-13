@@ -1,12 +1,8 @@
 import { MDBInputGroup } from 'mdb-react-ui-kit'
 import DateFnsUtils from "@date-io/date-fns"; // import
-import { alpha } from '@material-ui/core/styles'
 import { DatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
-
-
 import React from 'react'
 import moment from 'moment';
-
 
 const InputField = ({ readOnly, type, label, options, icon, onChange, value, name, handleDateChange, selectedDate }) => {
 

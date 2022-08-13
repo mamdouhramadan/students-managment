@@ -1,21 +1,19 @@
 export const API_URL = process.env.REACT_APP_SERVER_URL;
 
 
-export const roles = {
-    label: 'Roles',
-    options: [
-        {
-            text: 'Admin',
-            value: 'admin',
-            permissions: ['view', 'edit', 'delete', 'create']
-        },
-        {
-            text: 'Teacher',
-            value: 'teacher',
-            permissions: ['view']
-        }
-    ]
-}
+export const roles = [
+    {
+        text: 'Admin',
+        value: 'admin',
+        permissions: ['view', 'edit', 'delete', 'create']
+    },
+    {
+        text: 'Teacher',
+        value: 'teacher',
+        permissions: ['view']
+    }
+]
+
 
 export const relationships = ['Parent', 'Sibling', 'Spouse']
 

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_URL } from "../Constants";
+import { API_URL } from "../constants";
 
 // Get all students 
 export const getStudents = axios.get(`${API_URL}/students`)

@@ -1,6 +1,6 @@
 import React from 'react'
 import Lottie from 'react-lottie';
-import ServerError from './../../Assets/animations/server-error.json'
+import ServerError from './../../assets/animations/server-error.json'
 
 const LottieAnimation = () => {
 

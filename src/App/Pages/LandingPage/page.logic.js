@@ -1,9 +1,9 @@
-import { type } from '@testing-library/user-event/dist/type';
 import axios from 'axios';
-import { useState } from 'react'
-import { addFamilyMember, addStudent, deleteFamilyMember, editStudent, getFamilyMembers, getNationalities, getSingleStudent, getStudents, updateNationality } from '../../API';
+import { useEffect, useState } from 'react'
+import { addFamilyMember, addStudent, deleteFamilyMember, editStudent, getFamilyMembers, getNationalities, getSingleStudent, getStudents, updateNationality } from '../../api';
 import ShowToast from '../../components/ShowToast';
-
+import dispatchers from '../../flux/dispatchers';
+import studentStore from './../../flux/StudentStore';
 const PageLogic = () => {
     const initialData = {
         firstName: '',
@@ -24,13 +24,19 @@ const PageLogic = () => {
 
     const [loading, setLoading] = useState(true);
     const [showModel, setShowModel] = useState(false);
-    const [studentsList, setStudentsList] = useState([])  // useeffect to get all students from the server
+    const [studentsList, setStudentsList] = useState(studentStore.studentList)  // useeffect to get all students from the server
     const [student, setStudent] = useState(initialStudent)
     const [newFamilyMember, setNewFamilyMember] = useState({ ...initialFamily, ...initialData })
     const [nationalities, setNationalities] = useState([])
     const [showMemberForm, setshowMemberForm] = useState(false)
     const header = ['#', 'Name', 'Date of Birth', 'Actions']
 
+    useEffect(() => {
+        studentStore.on('change', () => {
+            setStudentsList(studentStore.studentList)
+            console.log('this is the student list', studentStore.studentList)
+        })
+    }, [])
 
     // ===================== Modal Function =====================
     const modalTitle = (type) => {
@@ -69,12 +75,16 @@ const PageLogic = () => {
     const GetStudentsListAndNationalities = async () => {
         setLoading(true)
         await axios.all([getStudents, getNationalities]).then(axios.spread((...responses) => {
-            setStudentsList(responses[0].data);
-            setNationalities(responses[1].data);
-
+            // setStudentsList(responses[0].data);
+            // setNationalities(responses[1].data);
+            dispatchers.dispatch({
+                type: 'LOAD_STUDENT_LIST',
+                payload: {
+                    students: [...responses[0].data],
+                    nationalities: { ...responses[1].data.data }
+                }
+            })
             setLoading(false)
-
-
         })).catch(errors => {
             console.log(errors);
             setLoading(false)
@@ -93,7 +103,7 @@ const PageLogic = () => {
                 }
                 return std
             }))
-            
+
             toggleModal();
             // reset the student object
             setStudent(initialStudent);
@@ -134,9 +144,9 @@ const PageLogic = () => {
     }
 
     // update nationality for Family Member
-    const updateMemberNationality = (e,id) => {
-        console.log('member.ID: ',id);
-        console.log('e.target.value : ',e.target.value);
+    const updateMemberNationality = (e, id) => {
+        console.log('member.ID: ', id);
+        console.log('e.target.value : ', e.target.value);
         updateNationality(id, e.target.value).then((res) => {
             // setStudent({ ...student, FamilyMembers: [...student.FamilyMembers, res.data] })
             ShowToast('success', 'Nationality Updated')
@@ -216,7 +226,7 @@ const PageLogic = () => {
     const handleAddFamilyMember = () => {
         if (student.type === 'edit') {
             // validation
-            if (newFamilyMember.firstName === '' || newFamilyMember.lastName === '' || newFamilyMember.dateOfBirth === '' ) {
+            if (newFamilyMember.firstName === '' || newFamilyMember.lastName === '' || newFamilyMember.dateOfBirth === '') {
                 ShowToast('error', 'Please fill all fields')
                 return
             } else {

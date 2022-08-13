@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import Table from '../../components/Table';
-import PageContainer from '../../Containers/PageContainer';
+import PageContainer from '../../containers/PageContainer';
 import { MDBBtn, MDBCol, MDBRow } from 'mdb-react-ui-kit';
 import AppModal from '../../components/Modal';
 import InputField from '../../components/InputField';
 import { ActionButton } from '../../components/ActionButton';
-import { studentForm } from '../../Constants';
+import { studentForm } from '../../constants';
 import moment from 'moment';
 import PageLogic from './page.logic';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -17,7 +17,7 @@ const LandingPage = () => {
     const pageTitle = 'Students';
 
     useEffect(() => {
-        GetStudentsListAndNationalities()
+         GetStudentsListAndNationalities()
     }, []);
 
     return (
