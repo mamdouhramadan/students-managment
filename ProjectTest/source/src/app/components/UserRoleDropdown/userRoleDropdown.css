@@ -1,9 +1,0 @@
-.select-role{
-    background-color: transparent;
-    border: none;
-    color: var(--white-color);
-    outline: 0;
-}
-.select-role option{
-    color: #555;
-}
