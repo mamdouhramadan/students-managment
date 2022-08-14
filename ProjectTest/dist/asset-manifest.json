@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.09594808.css",
+    "main.js": "/static/js/main.0455035a.js",
+    "static/media/RubikDistressed-Regular.ttf": "/static/media/RubikDistressed-Regular.904e9380e0b728a433d7.ttf",
+    "static/media/logo.png": "/static/media/logo.626b1d4e5ac4f5739e94.png",
+    "index.html": "/index.html",
+    "main.09594808.css.map": "/static/css/main.09594808.css.map",
+    "main.0455035a.js.map": "/static/js/main.0455035a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09594808.css",
+    "static/js/main.0455035a.js"
+  ]
+}

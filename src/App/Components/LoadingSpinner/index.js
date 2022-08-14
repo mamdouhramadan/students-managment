@@ -13,7 +13,7 @@ const LoadingSpinner = () => {
     };
 
     return (
-        <div class="loading-spinner">
+        <div className="loading-spinner">
             <Lottie
                 options={defaultOptions}
                 height={200}

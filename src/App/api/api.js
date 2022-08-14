@@ -19,12 +19,6 @@ export const editStudent = (id, student) => axios.put(`${API_URL}/Students/${id}
 // Get Family Members For Particular Student
 export const getFamilyMembers = (id) => axios.get(`${API_URL}/Students/${id}/FamilyMembers`)
 
-// Add Family Member
-export const addFamilyMember = (id, familyMember) => axios.post(
-    `${API_URL}/Students/${id}/FamilyMembers`,
-    JSON.stringify(familyMember),
-    { headers: { "Content-Type": "application/json" } }
-)
 
 // Add Family Member
 export const deleteFamilyMember = (id) => axios.delete(`${API_URL}/FamilyMembers/${id}`)
