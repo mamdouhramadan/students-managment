@@ -121,21 +121,21 @@ npm run client   # React only
 
 ## Screenshots
 
-UI captures live in the repo under [`docs/screenshots/`](docs/screenshots/) (PNG). They render on GitHub the same as locally.
+PNG captures live under [`docs/screenshots/`](docs/screenshots/). Below are **text links only** (no inline previews) so the README stays compact on GitHub.
 
-| Area | File | Preview |
-|------|------|---------|
-| Login | [`01-login.png`](docs/screenshots/01-login.png) | ![Login](docs/screenshots/01-login.png) |
-| Home dashboard | [`02-home.png`](docs/screenshots/02-home.png) | ![Home](docs/screenshots/02-home.png) |
-| Students (cards) | [`03-students-cards.png`](docs/screenshots/03-students-cards.png) | ![Students cards](docs/screenshots/03-students-cards.png) |
-| Students (table / filters) | [`04-students-table.png`](docs/screenshots/04-students-table.png) | ![Students table](docs/screenshots/04-students-table.png) |
-| Student profile drawer | [`05-student-drawer.png`](docs/screenshots/05-student-drawer.png) | ![Student drawer](docs/screenshots/05-student-drawer.png) |
-| Parents | [`06-parents.png`](docs/screenshots/06-parents.png) | ![Parents](docs/screenshots/06-parents.png) |
-| Timetable | [`07-timetable.png`](docs/screenshots/07-timetable.png) | ![Timetable](docs/screenshots/07-timetable.png) |
-| Timetable conflicts banner | [`08-timetable-conflicts.png`](docs/screenshots/08-timetable-conflicts.png) | ![Timetable conflicts](docs/screenshots/08-timetable-conflicts.png) |
-| Reminders | [`09-reminders.png`](docs/screenshots/09-reminders.png) | ![Reminders](docs/screenshots/09-reminders.png) |
-| Site settings (general + tags) | [`10-settings.png`](docs/screenshots/10-settings.png) | ![Site settings](docs/screenshots/10-settings.png) |
-| Admin users | [`11-admin-users.png`](docs/screenshots/11-admin-users.png) | ![Admin users](docs/screenshots/11-admin-users.png) |
+| Area | Screenshot |
+|------|------------|
+| Login | [01-login.png](docs/screenshots/01-login.png) |
+| Home dashboard | [02-home.png](docs/screenshots/02-home.png) |
+| Students (cards) | [03-students-cards.png](docs/screenshots/03-students-cards.png) |
+| Students (table / filters) | [04-students-table.png](docs/screenshots/04-students-table.png) |
+| Student profile drawer | [05-student-drawer.png](docs/screenshots/05-student-drawer.png) |
+| Parents | [06-parents.png](docs/screenshots/06-parents.png) |
+| Timetable | [07-timetable.png](docs/screenshots/07-timetable.png) |
+| Timetable conflicts banner | [08-timetable-conflicts.png](docs/screenshots/08-timetable-conflicts.png) |
+| Reminders | [09-reminders.png](docs/screenshots/09-reminders.png) |
+| Site settings (general + tags) | [10-settings.png](docs/screenshots/10-settings.png) |
+| Admin users | [11-admin-users.png](docs/screenshots/11-admin-users.png) |
 
 ---
 
