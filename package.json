@@ -1,0 +1,66 @@
+{
+  "name": "stroika-test",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3101",
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
+    "@mui/x-date-pickers": "^6.20.2",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "autoprefixer": "^10.4.27",
+    "axios": "^0.27.2",
+    "date-fns": "^2.29.1",
+    "events": "^3.3.0",
+    "moment": "^2.29.4",
+    "nuqs": "^2.8.9",
+    "postcss": "^8.5.8",
+    "react": "^18.2.0",
+    "react-colorful": "^5.6.1",
+    "react-dom": "^18.2.0",
+    "react-lottie": "^1.2.3",
+    "react-router-dom": "^6.22.0",
+    "react-scripts": "5.0.1",
+    "react-toastify": "^9.0.8",
+    "recharts": "^3.8.1",
+    "tailwindcss": "^3.4.19",
+    "vaul": "^1.1.2",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0"
+  },
+  "scripts": {
+    "client": "react-scripts start",
+    "start": "concurrently -n api,web -c blue,green \"npm run server\" \"npm run client\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "PORT=3101 node server/server.js",
+    "dev": "npm start"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

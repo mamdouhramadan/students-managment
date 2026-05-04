@@ -1,0 +1,526 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "teacher@school.test",
+      "password": "$2a$10$iDxayIrdopaLKjrQNveHOO/ac0COK./W/vGrVT6kfjgH4tEhRfF/m",
+      "role": "teacher",
+      "name": "Ms. Teacher",
+      "avatarUrl": null,
+      "active": true,
+      "studentId": null,
+      "teacherClassGroupIds": [
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "email": "student@school.test",
+      "password": "$2a$10$QJGHcaOKx9xsIl0I9Dngp.52uoZQwMg6Lj1EPii5KOYLhAEQGAR8u",
+      "role": "student",
+      "studentId": 1,
+      "name": "Ahmed Ali",
+      "avatarUrl": null,
+      "active": true
+    },
+    {
+      "id": 3,
+      "email": "admin@school.test",
+      "password": "$2a$10$lAg27evpNxFTGCFt7yTLrOkXsywp98PRmXZx9uLoJPINZGQWNCNc.",
+      "role": "admin",
+      "name": "Administrator",
+      "avatarUrl": null,
+      "active": true,
+      "studentId": null
+    },
+    {
+      "id": 4,
+      "email": "teacher2@school.test",
+      "password": "$2a$10$iDxayIrdopaLKjrQNveHOO/ac0COK./W/vGrVT6kfjgH4tEhRfF/m",
+      "role": "teacher",
+      "name": "Mr. Jones",
+      "avatarUrl": null,
+      "active": true,
+      "studentId": null,
+      "teacherClassGroupIds": [
+        2
+      ]
+    },
+    {
+      "id": 5,
+      "email": "teacher3@school.test",
+      "password": "$2a$10$iDxayIrdopaLKjrQNveHOO/ac0COK./W/vGrVT6kfjgH4tEhRfF/m",
+      "role": "teacher",
+      "name": "Ms. Patel",
+      "avatarUrl": null,
+      "active": true,
+      "studentId": null,
+      "teacherClassGroupIds": [
+        3
+      ]
+    },
+    {
+      "id": 6,
+      "email": "teacher4@school.test",
+      "password": "$2a$10$iDxayIrdopaLKjrQNveHOO/ac0COK./W/vGrVT6kfjgH4tEhRfF/m",
+      "role": "teacher",
+      "name": "Dr. Hassan",
+      "avatarUrl": null,
+      "active": true,
+      "studentId": null,
+      "teacherClassGroupIds": []
+    },
+    {
+      "id": 7,
+      "email": "sara.student@school.test",
+      "password": "$2a$10$iDxayIrdopaLKjrQNveHOO/ac0COK./W/vGrVT6kfjgH4tEhRfF/m",
+      "role": "student",
+      "name": "Sara Hassan",
+      "avatarUrl": null,
+      "active": true,
+      "studentId": 2
+    },
+    {
+      "id": 8,
+      "email": "omar.student@school.test",
+      "password": "$2a$10$iDxayIrdopaLKjrQNveHOO/ac0COK./W/vGrVT6kfjgH4tEhRfF/m",
+      "role": "student",
+      "name": "Omar Khaled",
+      "avatarUrl": null,
+      "active": true,
+      "studentId": 3
+    },
+    {
+      "id": 9,
+      "email": "layla.student@school.test",
+      "password": "$2a$10$iDxayIrdopaLKjrQNveHOO/ac0COK./W/vGrVT6kfjgH4tEhRfF/m",
+      "role": "student",
+      "name": "Layla Mansour",
+      "avatarUrl": null,
+      "active": true,
+      "studentId": 4
+    },
+    {
+      "id": 10,
+      "email": "youssef.student@school.test",
+      "password": "$2a$10$iDxayIrdopaLKjrQNveHOO/ac0COK./W/vGrVT6kfjgH4tEhRfF/m",
+      "role": "student",
+      "name": "Youssef Nasser",
+      "avatarUrl": null,
+      "active": true,
+      "studentId": 5
+    },
+    {
+      "id": 11,
+      "email": "mina.student@school.test",
+      "password": "$2a$10$iDxayIrdopaLKjrQNveHOO/ac0COK./W/vGrVT6kfjgH4tEhRfF/m",
+      "role": "student",
+      "name": "Mina Farid",
+      "avatarUrl": null,
+      "active": true,
+      "studentId": 6
+    }
+  ],
+  "nationalities": [
+    {
+      "id": 1,
+      "Title": "Egyptian"
+    },
+    {
+      "id": 2,
+      "Title": "Saudi"
+    },
+    {
+      "id": 3,
+      "Title": "Emirati"
+    }
+  ],
+  "students": [
+    {
+      "firstName": "Ahmed",
+      "lastName": "Ali",
+      "dateOfBirth": "2010-05-15",
+      "nationalityId": 1,
+      "address": "Al Rashidiya, Building 12, Dubai, UAE",
+      "eid": "784-2010-1234567-1",
+      "email": "ahmed.ali@student.school.test",
+      "notes": "Strong in science; prefers morning sessions.",
+      "id": 1,
+      "classGroupId": 1,
+      "active": true,
+      "tagIds": [
+        1
+      ],
+      "createdAt": "2026-01-05T10:00:00.000Z",
+      "updatedAt": "2026-04-10T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "firstName": "Sara",
+      "lastName": "Hassan",
+      "email": "sara.hassan@student.school.test",
+      "dateOfBirth": "2011-08-20",
+      "nationalityId": 2,
+      "address": "Khalifa City A, Abu Dhabi, UAE",
+      "eid": "784-2011-2345678-2",
+      "notes": "",
+      "classGroupId": 2,
+      "active": true,
+      "tagIds": [
+        2
+      ],
+      "createdAt": "2026-01-05T10:00:00.000Z",
+      "updatedAt": "2026-04-10T10:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "firstName": "Omar",
+      "lastName": "Khaled",
+      "email": "omar.khaled@student.school.test",
+      "dateOfBirth": "2012-03-10",
+      "nationalityId": 3,
+      "address": "Al Nuaimiya, Ajman, UAE",
+      "eid": "784-2012-3456789-3",
+      "notes": "",
+      "classGroupId": 3,
+      "active": true,
+      "tagIds": [],
+      "createdAt": "2026-01-05T10:00:00.000Z",
+      "updatedAt": "2026-04-10T10:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "firstName": "Layla",
+      "lastName": "Mansour",
+      "email": "layla.mansour@student.school.test",
+      "dateOfBirth": "2011-01-22",
+      "nationalityId": 1,
+      "address": "Dubai Marina, UAE",
+      "eid": "784-2011-4567890-4",
+      "notes": "",
+      "classGroupId": 1,
+      "active": false,
+      "tagIds": [],
+      "createdAt": "2026-01-05T10:00:00.000Z",
+      "updatedAt": "2026-03-20T10:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "firstName": "Youssef",
+      "lastName": "Nasser",
+      "email": "youssef.nasser@student.school.test",
+      "dateOfBirth": "2010-04-21T00:00:00.000Z",
+      "nationalityId": 2,
+      "address": "Sharjah, UAE",
+      "eid": "784-2010-5678901-5",
+      "notes": "",
+      "classGroupId": 2,
+      "active": true,
+      "tagIds": [],
+      "createdAt": "2026-01-05T10:00:00.000Z",
+      "updatedAt": "2026-04-13T09:52:56.389Z"
+    },
+    {
+      "id": 6,
+      "firstName": "Mina",
+      "lastName": "Farid",
+      "email": "mina.farid@student.school.test",
+      "dateOfBirth": "2009-07-18",
+      "nationalityId": 3,
+      "address": "Fujairah, UAE",
+      "eid": "784-2009-6789012-6",
+      "notes": "",
+      "classGroupId": 3,
+      "active": true,
+      "tagIds": [],
+      "createdAt": "2026-01-05T10:00:00.000Z",
+      "updatedAt": "2026-04-10T10:00:00.000Z"
+    }
+  ],
+  "studentTags": [
+    {
+      "id": 1,
+      "name": "IEP"
+    },
+    {
+      "id": 2,
+      "name": "Athletics"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "name": "Arabic",
+      "code": "ARB"
+    },
+    {
+      "id": 2,
+      "name": "Mathematics",
+      "code": "MATH"
+    },
+    {
+      "id": 3,
+      "name": "Science",
+      "code": "SCI"
+    },
+    {
+      "id": 4,
+      "name": "English",
+      "code": "ENG"
+    },
+    {
+      "id": 5,
+      "name": "Social Studies",
+      "code": "SOC"
+    },
+    {
+      "id": 6,
+      "name": "Islamic Education",
+      "code": "ISL"
+    },
+    {
+      "id": 7,
+      "name": "Physical Education",
+      "code": "PE"
+    },
+    {
+      "id": 8,
+      "name": "Art & Design",
+      "code": "ART"
+    },
+    {
+      "id": 9,
+      "name": "Music",
+      "code": "MUS"
+    },
+    {
+      "id": 10,
+      "name": "ICT / Computer Science",
+      "code": "ICT"
+    },
+    {
+      "id": 11,
+      "name": "French",
+      "code": "FRE"
+    },
+    {
+      "id": 12,
+      "name": "Library & Research Skills",
+      "code": "LIB"
+    },
+    {
+      "id": 13,
+      "name": "Moral Education",
+      "code": "MOR"
+    },
+    {
+      "id": 14,
+      "name": "STEM Club",
+      "code": "STEM"
+    }
+  ],
+  "grades": [
+    {
+      "id": 1,
+      "name": "Grade 5"
+    },
+    {
+      "id": 2,
+      "name": "Grade 6"
+    }
+  ],
+  "classGroups": [
+    {
+      "id": 1,
+      "gradeId": 1,
+      "name": "5A"
+    },
+    {
+      "id": 2,
+      "gradeId": 1,
+      "name": "5B"
+    },
+    {
+      "id": 3,
+      "gradeId": 2,
+      "name": "6A"
+    }
+  ],
+  "timetablePeriods": [
+    {
+      "id": 1,
+      "order": 1,
+      "label": "Period 1"
+    },
+    {
+      "id": 2,
+      "order": 2,
+      "label": "Period 2"
+    },
+    {
+      "id": 3,
+      "order": 3,
+      "label": "Period 3"
+    },
+    {
+      "id": 4,
+      "order": 4,
+      "label": "Period 4"
+    },
+    {
+      "id": 5,
+      "order": 5,
+      "label": "Period 5"
+    },
+    {
+      "id": 6,
+      "order": 6,
+      "label": "Period 6"
+    },
+    {
+      "id": 7,
+      "order": 7,
+      "label": "Period 7"
+    }
+  ],
+  "timetableCells": [
+    {
+      "id": 1,
+      "classGroupId": 1,
+      "day": "sun",
+      "period": 1,
+      "courseId": 1,
+      "teacherUserId": 1,
+      "room": "101"
+    },
+    {
+      "id": 2,
+      "classGroupId": 1,
+      "day": "sun",
+      "period": 2,
+      "courseId": 2,
+      "teacherUserId": 1,
+      "room": "102"
+    },
+    {
+      "id": 3,
+      "classGroupId": 1,
+      "day": "mon",
+      "period": 1,
+      "courseId": 3,
+      "teacherUserId": 1,
+      "room": "Lab 1"
+    },
+    {
+      "id": 4,
+      "classGroupId": 1,
+      "day": "wed",
+      "period": 3,
+      "courseId": 4,
+      "teacherUserId": 1,
+      "room": "103"
+    },
+    {
+      "id": 5,
+      "classGroupId": 2,
+      "day": "sun",
+      "period": 1,
+      "courseId": 2,
+      "teacherUserId": 1,
+      "room": "201"
+    }
+  ],
+  "parents": [
+    {
+      "id": 1,
+      "firstName": "Mona",
+      "lastName": "Ali",
+      "email": "mona@example.com",
+      "phone": "01001234567",
+      "studentId": 1,
+      "relationship": "Parent"
+    },
+    {
+      "id": 2,
+      "firstName": "Hassan",
+      "lastName": "Ibrahim",
+      "email": "hassan@example.com",
+      "phone": "01007654321",
+      "studentId": 2,
+      "relationship": "Parent"
+    },
+    {
+      "id": 3,
+      "firstName": "Layla",
+      "lastName": "Said",
+      "email": "layla@example.com",
+      "phone": "01110000000",
+      "studentId": 3,
+      "relationship": "Parent"
+    }
+  ],
+  "familyMembers": [
+    {
+      "id": 1,
+      "studentId": 1,
+      "firstName": "Youssef",
+      "lastName": "Ali",
+      "relationship": "Sibling",
+      "dateOfBirth": "2012-01-15",
+      "nationalityId": 1
+    },
+    {
+      "id": 2,
+      "studentId": 2,
+      "firstName": "Nour",
+      "lastName": "Hassan",
+      "relationship": "Sibling",
+      "dateOfBirth": "2014-06-20",
+      "nationalityId": 2
+    }
+  ],
+  "teacherReminders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Follow up with Ahmed's parent",
+      "notes": "Discuss science progress",
+      "dueDate": "2026-04-20",
+      "done": false,
+      "createdAt": "2026-04-05T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "title": "kkkokok",
+      "notes": "okok",
+      "dueDate": "2026-04-16",
+      "done": false,
+      "createdAt": "2026-04-07T12:09:58.748Z"
+    }
+  ],
+  "siteSettings": {
+    "id": 1,
+    "schoolName": "Stroika School",
+    "schoolTagline": "Student management & family communication",
+    "supportPhone": "+971 4 000 0000",
+    "academicYear": "2025–2026",
+    "timezone": "Asia/Dubai",
+    "announcement": "Welcome to the student management portal.",
+    "contactEmail": "office@school.test",
+    "admissionsEmail": "admissions@school.test",
+    "smtpHost": "smtp.school.test",
+    "smtpPort": "587",
+    "smtpSecure": "true",
+    "smtpUser": "",
+    "emailFromName": "Stroika School",
+    "emailFromAddress": "noreply@school.test",
+    "emailReplyTo": "office@school.test",
+    "emailSignature": "— Stroika School Office",
+    "themeMode": "system",
+    "primaryColorHex": "#8854d0",
+    "density": "default",
+    "timetableWeekStartDay": "sun",
+    "timetableWeekendDays": "[\"fri\",\"sat\"]"
+  }
+}

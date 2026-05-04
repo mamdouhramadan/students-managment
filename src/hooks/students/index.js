@@ -1,0 +1,1 @@
+export { useOpenStudent } from './useOpenStudent';

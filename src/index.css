@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+/* Css Variables  */
+:root {
+  --main-color: #8854d0;
+  --text-color: #121212;
+  --body-color: #fafafa;
+  --white-color: #fff;
+  --surface-paper: #fff;
+  --danger-color: #c0392b;
+  --box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  --border-radius: 5px;
+}
+
+/*
+ * Theme tokens (--text-color, --body-color, etc.) are set on documentElement from
+ * src/index.jsx (MUI palette) so they always match the in-app light/dark toggle.
+ * Do not duplicate them here — that caused light mode to keep dark OS/native colors.
+ */
+html.dark {
+  --box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* Selector Style — background from MUI CssBaseline + theme */
+body {
+  margin: 0;
+  font-family: 'Almarai', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html[lang='ar'] body {
+  font-family: 'Almarai', 'Segoe UI', Tahoma, sans-serif;
+}
+
+button {
+  box-shadow: var(--box-shadow) !important;
+}
+
+button.btn-light {
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  background-color: var(--surface-paper) !important;
+}
+
+html.dark button.btn-light {
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+button.btn-primary {
+  background: var(--main-color);
+  border-radius: var(--border-radius);
+}
+
+.MuiButtonBase-root {
+  box-shadow: none !important;
+}
+
+table {
+  background-color: var(--surface-paper);
+  border-radius: var(--border-radius);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Min Logo  */
+
+
+.site-logo {
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 26px;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--main-color);
+}
+
+.site-logo .light-text {
+  color: var(--white-color);
+}
+
+.site-logo img {
+  filter: invert(42%) sepia(38%) saturate(1071%) hue-rotate(223deg) brightness(91%) contrast(90%);
+}
+
+.site-logo .light-img {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* Main Content  */
+
+.main-content {
+  min-height: calc(100vh - 102px)
+}
+
+.breadcrumb-ligh {
+  background: var(--surface-paper);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.main-modal .form-group {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.main-modal .input-group {
+  flex-direction: row-reverse;
+  margin: 0 !important;
+}
+
+.main-modal .input-group .input-group-text {
+  border-radius: 0.25rem !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.main-modal .input-group .form-control {
+  border-radius: 0.25rem !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  margin-left: 0 !important;
+  margin-right: -1px !important;
+}
+
+.main-modal .input-group .MuiFormControl-root {
+  flex: 1;
+  border: 1px solid #bdbdbd;
+  padding-top: 2px;
+  transition: all .2s linear;
+  border-radius: 0.25rem !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  margin-left: 0 !important;
+  margin-right: -1px !important;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.main-modal .input-group .MuiFormControl-root ::before,
+.main-modal .input-group .MuiFormControl-root ::after {
+  display: none !important;
+}
+
+.breadcrumb {
+  margin: 0;
+}
+
+.choose-role {
+  color: #333 !important;
+  border: 1px solid #bdbdbd !important;
+  padding: 5px 10px;
+}
+
+/* RTL Style */
+
+html[dir='rtl'] {
+  direction: rtl;
+}
+
+html[dir='rtl'] .MuiButton-startIcon,
+html[dir='rtl'] .MuiTab-iconWrapper{
+  margin-inline-end: 8px !important;
+  margin-inline-start: 0 !important;
+}
+
+/* Tailwind utilities — `main` maps to `--main-color` (see tailwind.config.js + siteSettings) */
+@tailwind utilities;

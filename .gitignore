@@ -1,0 +1,43 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Production
+/build
+/dist
+
+# Testing
+/coverage
+
+# Misc / logs
+.DS_Store
+Thumbs.db
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Environment and secrets (never commit real credentials)
+.env
+.env.*
+!.env.example
+
+# CRA / tooling caches
+.eslintcache
+node_modules/.cache
+
+# Local editor / OS
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# SpecStory / local agent session data
+.specstory/
+
+# Archives and ad-hoc exports (not source)
+*.zip
+*.tar.gz

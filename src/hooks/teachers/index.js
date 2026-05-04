@@ -1,0 +1,1 @@
+export { useTeachers } from './useTeachers';

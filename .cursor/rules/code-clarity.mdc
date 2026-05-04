@@ -1,0 +1,22 @@
+---
+description: Readable names, comments, and seed data conventions for this repo
+alwaysApply: true
+---
+
+# Code clarity (students-management-flux)
+
+## Variable and identifier naming
+
+- Prefer **full words** over single-letter names (`index`, `course`, `teacher` — not `i`, `c`, `t`, `m`, `d`).
+- For lookups and collections, use descriptive names: `courseLookupById`, `sectionsGroupedByGrade`, `slotDraftByDayPeriod`, not `m`, `map`, `obj`.
+- Short names are acceptable only in **tiny scopes** (e.g. a one-line arrow callback) when meaning is obvious; default to clarity.
+
+## Comments
+
+- Add **brief comments** where logic is non-obvious: API shape, calendar rules, draft ↔ API mapping, or why a guard/validation exists.
+- Do not restate what the code already says line-by-line; explain **intent** and **data flow** when helpful.
+
+## Demo / seed data (`server/db.json`)
+
+- When adding features that need lists (courses, grades, etc.), include enough **dummy rows** so screens can be tested without manual creation first.
+- Keep IDs stable and referenced consistently (`timetableCells.courseId` must exist in `courses`).
