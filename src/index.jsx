@@ -12,6 +12,7 @@ import { getBrandPrimary, tableHeadBg } from './theme/brandPalette';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { AppRoutes } from './routers';
+import { getAppBasePath } from './utils/appBasePath';
 import { LanguageProvider, useLanguage } from './providers/LanguageProvider';
 import { ThemeColorProvider, useThemeColor } from './providers/ThemeColorProvider';
 import { ThemeModeProvider, useThemeMode } from './providers/ThemeModeProvider';
@@ -157,8 +158,10 @@ function App() {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const routerBasename = getAppBasePath() || undefined;
+
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename={routerBasename}>
     <NuqsAdapter>
       <App />
     </NuqsAdapter>

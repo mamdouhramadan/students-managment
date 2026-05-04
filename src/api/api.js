@@ -1,6 +1,7 @@
 import axios from "axios";
 import { API_URL } from "../constants";
 import { userActions } from "../helpers";
+import { appPath } from "../utils/appBasePath";
 
 const baseConfig = { baseURL: API_URL || undefined };
 
@@ -37,7 +38,7 @@ apiClient.interceptors.response.use(
       if (!onLoginPage && !handling401) {
         handling401 = true;
         userActions.logout();
-        window.location.assign("/login");
+        window.location.assign(appPath("/login"));
       }
     }
     return Promise.reject(error);
