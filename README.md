@@ -1,6 +1,34 @@
-# Students Management (Stroika)
+# Students Management
 
-A school portal for managing students, parents, timetables, and staff accounts. The frontend is a React (CRA) app with Material UI; the demo backend is **JSON Server** with **json-server-auth** (JWT) and custom Express routes in `server/server.js`. Data persists in `server/db.json`.
+A school portal for managing students, parents, timetables, and staff accounts. The frontend is a **React 18** app (Create React App) built around **Material UI (MUI)**. The backend for local development is **JSON Server** with **json-server-auth** (JWT) and custom Express routes in `server/server.js`; demo data lives in `server/db.json`.
+
+---
+
+## Live demo
+
+| | Link |
+|---|------|
+| **Web app (GitHub Pages)** | [https://mamdouhramadan.github.io/students-managment/](https://mamdouhramadan.github.io/students-managment/) |
+
+The hosted UI talks to a **demo API on [Render](https://render.com/)** (same Node + JSON Server stack as in this repo). Render is used **only for demonstration**—cold starts, ephemeral disk, and shared demo credentials are expected; it is not a production hosting recommendation for real school data.
+
+---
+
+## Material UI (MUI)
+
+The UI is implemented with **MUI v5** (Material Design components, layout, forms, data display, and theming). Styling uses MUI’s **Emotion** integration. Date inputs use **MUI X Date Pickers** on top of **date-fns**.
+
+Pinned dependency ranges from `package.json` (install resolves to latest matching minors):
+
+| Package | Version |
+|---------|---------|
+| [@mui/material](https://mui.com/material-ui/getting-started/) | **^5.16.7** |
+| [@mui/icons-material](https://mui.com/material-ui/material-icons/) | **^5.16.7** |
+| [@mui/x-date-pickers](https://mui.com/x/react-date-pickers/) | **^6.20.2** |
+| [@emotion/react](https://emotion.sh/docs/introduction) | ^11.11.4 |
+| [@emotion/styled](https://emotion.sh/docs/styled) | ^11.11.5 |
+
+Upgrading across **MUI major versions** (for example v5 → v6) requires a dedicated migration pass (API and style changes). This project intentionally standardizes on **MUI 5** for consistency with the current component set and X Date Pickers v6.
 
 ---
 
@@ -93,37 +121,21 @@ npm run client   # React only
 
 ## Screenshots
 
-Add PNG or JPG files under `docs/screenshots/` (create the folder if needed) and either keep the filenames below or update the paths in this table.
+UI captures live in the repo under [`docs/screenshots/`](docs/screenshots/) (PNG). They render on GitHub the same as locally.
 
-| Area | Suggested filename | Placeholder |
-|------|--------------------|-------------|
-| Login | `01-login.png` | ![Login](docs/screenshots/01-login.png) |
-| Home dashboard | `02-home.png` | ![Home](docs/screenshots/02-home.png) |
-| Students (cards) | `03-students-cards.png` | ![Students cards](docs/screenshots/03-students-cards.png) |
-| Students (table / filters) | `04-students-table.png` | ![Students table](docs/screenshots/04-students-table.png) |
-| Student profile drawer | `05-student-drawer.png` | ![Student drawer](docs/screenshots/05-student-drawer.png) |
-| Parents | `06-parents.png` | ![Parents](docs/screenshots/06-parents.png) |
-| Timetable | `07-timetable.png` | ![Timetable](docs/screenshots/07-timetable.png) |
-| Timetable conflicts banner | `08-timetable-conflicts.png` | ![Timetable conflicts](docs/screenshots/08-timetable-conflicts.png) |
-| Reminders | `09-reminders.png` | ![Reminders](docs/screenshots/09-reminders.png) |
-| Site settings (general + tags) | `10-settings.png` | ![Site settings](docs/screenshots/10-settings.png) |
-| Admin users | `11-admin-users.png` | ![Admin users](docs/screenshots/11-admin-users.png) |
-
-### Larger hero / gallery (optional)
-
-You can reuse the same files or add wide banners:
-
-```text
-docs/screenshots/hero-dashboard.png   — main marketing / README hero
-docs/screenshots/gallery-01.png
-docs/screenshots/gallery-02.png
-```
-
-![Hero — dashboard](docs/screenshots/hero-dashboard.png)
-
-![Gallery 1](docs/screenshots/gallery-01.png)
-
-![Gallery 2](docs/screenshots/gallery-02.png)
+| Area | File | Preview |
+|------|------|---------|
+| Login | [`01-login.png`](docs/screenshots/01-login.png) | ![Login](docs/screenshots/01-login.png) |
+| Home dashboard | [`02-home.png`](docs/screenshots/02-home.png) | ![Home](docs/screenshots/02-home.png) |
+| Students (cards) | [`03-students-cards.png`](docs/screenshots/03-students-cards.png) | ![Students cards](docs/screenshots/03-students-cards.png) |
+| Students (table / filters) | [`04-students-table.png`](docs/screenshots/04-students-table.png) | ![Students table](docs/screenshots/04-students-table.png) |
+| Student profile drawer | [`05-student-drawer.png`](docs/screenshots/05-student-drawer.png) | ![Student drawer](docs/screenshots/05-student-drawer.png) |
+| Parents | [`06-parents.png`](docs/screenshots/06-parents.png) | ![Parents](docs/screenshots/06-parents.png) |
+| Timetable | [`07-timetable.png`](docs/screenshots/07-timetable.png) | ![Timetable](docs/screenshots/07-timetable.png) |
+| Timetable conflicts banner | [`08-timetable-conflicts.png`](docs/screenshots/08-timetable-conflicts.png) | ![Timetable conflicts](docs/screenshots/08-timetable-conflicts.png) |
+| Reminders | [`09-reminders.png`](docs/screenshots/09-reminders.png) | ![Reminders](docs/screenshots/09-reminders.png) |
+| Site settings (general + tags) | [`10-settings.png`](docs/screenshots/10-settings.png) | ![Site settings](docs/screenshots/10-settings.png) |
+| Admin users | [`11-admin-users.png`](docs/screenshots/11-admin-users.png) | ![Admin users](docs/screenshots/11-admin-users.png) |
 
 ---
 
